@@ -6,7 +6,7 @@ const Game = () => import("../views/Game.vue");
 const About = () => import("../views/About.vue");
 
 const routes: Array<RouteRecordRaw> = [
-  { path: "/", name: "home", component: Home },
+  { path: "/", redirect: { name: "home" } },
   { path: "/home", name: "home", component: Home },
   { path: "/game", name: "game", component: Game },
   { path: "/about", name: "about", component: About },

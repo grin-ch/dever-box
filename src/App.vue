@@ -1,17 +1,28 @@
 <template>
-  <nav-bar class="nav-bar" />
-  <div>
-    <n-message-provider>
-      <MessageApi />
+  <n-message-provider>
+    <MessageApi />
+  </n-message-provider>
+  <n-layout>
+    <n-layout-header>
+      <nav-bar class="nav-bar" />
+    </n-layout-header>
+    <n-layout-content
+      content-style="width:80%; margin:0 auto; padding-top:24px;"
+    >
       <router-view />
-    </n-message-provider>
-  </div>
+    </n-layout-content>
+  </n-layout>
 </template>
 
 <script setup lang="ts">
-import { NMessageProvider } from "naive-ui";
-import NavBar from "./components/NavBar.vue";
-import MessageApi from "./components/message-api.vue";
+import {
+  NMessageProvider,
+  NLayout,
+  NLayoutHeader,
+  NLayoutContent,
+} from "naive-ui";
+import NavBar from "./components/global/NavBar.vue";
+import MessageApi from "./components/global/message-api.vue";
 </script>
 
 <style scoped>

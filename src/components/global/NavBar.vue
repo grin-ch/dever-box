@@ -1,5 +1,6 @@
 <template>
   <n-menu
+    class="menu"
     v-model:value="activeKey"
     mode="horizontal"
     :options="menuOptions"
@@ -80,3 +81,20 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+.menu {
+  height: 60px;
+  text-align: center;
+  width: 100%;
+  padding-left: 10%;
+  background-color: rgb(200, 200, 200);
+}
+.n-menu-item .n-menu-item-content {
+  height: 60px;
+}
+
+.n-menu-item .n-menu-item-content:hover {
+  background-color: rgb(210, 210, 210);
+}
+</style>
